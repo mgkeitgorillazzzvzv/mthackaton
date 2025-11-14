@@ -1,0 +1,227 @@
+@import url('https:
+@import 'tailwindcss';
+
+@theme {
+    --font-unbounded: 'Unbounded', cursive;
+}
+@font-face {
+    font-family: 'Moscow Sans';
+    src: url('/fonts/moscowsansregular.ttf') format('truetype');
+}
+
+html {
+    overflow-x: clip;
+}
+
+body {
+    font-family: 'Moscow Sans', sans-serif;
+    @apply bg-black text-white;
+    overflow-x: hidden !important;
+}
+ 
+@utility p-default {
+        @apply py-4 px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20;
+        max-width: 1440px; 
+        margin-left: auto;
+        margin-right: auto;
+}
+
+img {
+    pointer-events: none;
+}
+
+
+.hero-gradient {
+    
+    background: linear-gradient(to bottom,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.85) 8%,
+        rgba(0,0,0,0.55) 18%,
+        rgba(0,0,0,0.2) 35%,
+        rgba(0,0,0,0.0) 50%,
+        rgba(0,0,0,0.0) 50%,
+        rgba(0,0,0,0.2) 65%,
+        rgba(0,0,0,0.55) 82%,
+        rgba(0,0,0,0.85) 92%,
+        rgba(0,0,0,0.95) 100%
+    );
+}
+
+
+.bg-2-layer {
+    background-image: url('/bg_2.png');
+    background-size: cover;
+    background-position: center;
+    @apply hidden md:block;
+    
+    filter: grayscale(100%) contrast(0.95) brightness(0.95);
+}
+
+
+.bg-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.bg-focal-left { background-position: left center; }
+.bg-focal-right { background-position: right center; }
+.bg-focal-top { background-position: center top; }
+.bg-focal-bottom { background-position: center bottom; }
+
+
+.hero-section {
+    position: relative;
+    overflow-x: clip;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-bus,
+.hero-tram {
+    position: absolute;
+    bottom: 0;
+    width: 50%; 
+    pointer-events: none;
+}
+
+.hero-bus {
+    left: -12%; 
+    transform: translateX(0%);
+}
+
+.hero-tram {
+    right: -10%; 
+    transform: translateX(0%);
+}
+
+
+.hero-mosobr {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 18%; 
+    pointer-events: none;
+}
+
+.hero-laptop {
+    position: absolute;
+    top: 35%;
+    right: 8%;
+    width: 22%; 
+    pointer-events: none;
+}
+
+.hero-mt-logo {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 15%; 
+    pointer-events: none;
+}
+.hero-troika {
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+    width: 22%; 
+    pointer-events: none;
+}
+.hero-emblem {
+    position: absolute;
+    bottom: -40%;
+    right: 10%;
+    width: 28%; 
+    pointer-events: none;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+    .hero-bus,
+    .hero-tram {
+        width: 35%; 
+    }
+    
+    .hero-bus {
+        left: -8%;
+    }
+    
+    .hero-tram {
+        right: -6%;
+    }
+    
+    .hero-mosobr {
+        width: 10%;
+        top: 12%;
+        left: 6%;
+    }
+    
+    .hero-laptop {
+        width: 12%;
+        top: 9%;
+        right: 25%;
+    }
+    
+    .hero-mt-logo {
+        width: 8%;
+        bottom: 12%;
+        right: 30%;
+    }
+    
+    .hero-troika {
+        width: 15%;
+    }
+    
+    .hero-emblem {
+        width: 20%;
+    }
+}
+
+
+
+.case-overlay {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .case-overlay {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .case-overlay {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+}
+
+
+.form-input-base {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    background-color: #222222;
+    color: #BCBCBC;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-input-base:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.form-input-error {
+    border-color: #EF4444;
+}
+
+.form-input-base::placeholder {
+    color: #888888;
+}
+

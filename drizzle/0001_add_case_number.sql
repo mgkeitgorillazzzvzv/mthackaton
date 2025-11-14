@@ -1,0 +1,1 @@
+ALTER TABLE "registration" ADD COLUMN "case_number" varchar(10) NOT NULL DEFAULT 'case1';

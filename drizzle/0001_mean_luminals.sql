@@ -1,0 +1,1 @@
+ALTER TABLE "registration" ALTER COLUMN "case_number" SET DATA TYPE integer;
